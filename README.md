@@ -1,5 +1,5 @@
-# iSee — Missed Connections
-# iSee — Missed Connections
+# iSee Missed Connections
+# iSee Missed Connections
 
 **Sometimes a moment is all it takes. ♡**
 
