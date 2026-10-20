@@ -98,8 +98,8 @@ function Header({ user, navigate, setModal, logout }) {
   );
 }
 
-function Auth({ close, setUser, afterAuth }) {
-  const [mode, setMode] = useState('login');
+function Auth({ close, setUser, afterAuth, initialMode = 'login' }) {
+  const [mode, setMode] = useState(initialMode);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -720,7 +720,7 @@ function App() {
         <Plus />
       </button>
 
-      {modal === 'auth' && <Auth close={() => { setPendingPost(null); setModal(null); }} setUser={setUser} afterAuth={finishAuthentication} />}
+      {modal === 'auth' && <Auth close={() => { setPendingPost(null); setModal(null); }} setUser={setUser} afterAuth={finishAuthentication} initialMode={pendingPost ? 'signup' : 'login'} />}
       {modal === 'create' && <Create close={() => setModal(null)} locations={locations} user={user} setModal={setModal} reload={loadPosts} setPendingPost={setPendingPost} />}
       {modal?.startsWith('post:') && <Post id={modal.split(':')[1]} close={() => setModal(null)} reload={loadPosts} />}
       {modal?.startsWith('report:') && <Report id={modal.split(':')[1]} close={() => setModal(null)} />}
