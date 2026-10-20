@@ -228,7 +228,7 @@ function Create({ close, locations, user, setModal, reload, setPendingPost }) {
         <p className="choice-text">
           Would you like to create an account to save this post, edit or delete it later, and see your post history?
         </p>
-        <button className="primary-wide" onClick={() => { setPendingPost({ location, date, time, content: text }); close(); setModal('auth'); }}>
+        <button className="primary-wide" onClick={() => { setPendingPost({ location, date, time, content: text }); setModal('auth'); }}>
           Sign Up &amp; Save
         </button>
         <button className="secondary-wide" onClick={post}>Submit Anonymously</button>
