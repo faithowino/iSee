@@ -15,7 +15,9 @@ import {
 } from 'lucide-react';
 import './styles.css';
 
-const today = new Date().toISOString().slice(0, 10);
+const today = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'America/New_York',
+}).format(new Date());
 const fallbackLocations = [
   'CC', 'Terraces', 'CNS', 'CHS', 'Gym', 'Towers', 'Circles',
   'Upper Quads', 'Lower Quads', 'Gardens', 'Emerson', 'On Campus',
