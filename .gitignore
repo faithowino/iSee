@@ -1,5 +1,12 @@
-node_modules
-dist
+node_modules/
 .env
-*.log
+.env.*
+!.env.example
+
+dist/
+build/
+
 .DS_Store
+
+*.log
+npm-debug.log*

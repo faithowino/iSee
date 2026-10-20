@@ -27,6 +27,7 @@ const formatDate = (date) => new Intl.DateTimeFormat('en-US', {
   month: 'long',
   day: 'numeric',
   year: 'numeric',
+  timeZone: 'America/New_York',
 }).format(new Date(`${date}T12:00:00`));
 
 async function api(url, options = {}) {
@@ -472,7 +473,7 @@ function FAQ({ navigate }) {
     ['What is Comment?', 'Comments are for general reactions and conversation.'],
     ['Can I edit an anonymous post?', 'No. Anonymous posts cannot later be claimed.'],
     ['How does recovery work?', 'If you add an email, iSee can send a one-time recovery code.'],
-    ['What happens when something is reported?', 'Reports and automatic keyword checks can send content to moderation before it is visible.'],
+    ['What happens when something is reported?', 'The reported content will be reviewed by moderators and may be removed if it violates the rules.'],
   ];
 
   return (
